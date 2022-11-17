@@ -1,0 +1,35 @@
+{
+  "name": "pixelmotivesgrid",
+  "version": "1.0.0",
+  "description": "Pixel Motives Grid System",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ajpenalosa/pixelmotivesgrid.git"
+  },
+  "author": "AJ Penalosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajpenalosa/pixelmotivesgrid/issues"
+  },
+  "homepage": "https://github.com/ajpenalosa/pixelmotivesgrid#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "browserslist": "^4.21.4",
+    "gulp": "^4.0.2",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-if": "^3.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "minimist": "^1.2.7",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  }
+}

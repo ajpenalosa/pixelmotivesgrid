@@ -1,0 +1,131 @@
+/* -----------------------------------
+	Pixel Motives Grid System
+--------------------------------------------------------------------------------------------- */
+
+.pm-site-container {
+    display: grid;
+    gap: 60px;
+}
+
+.pm-grid {
+    
+    &--boxed {
+        margin: 0 auto;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat( 12, 1fr );
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
+    }
+    
+    &__column {
+        padding: 1rem;
+        grid-column: span 12;
+    }
+}
+
+/* -----------------------------------
+	FOR COLORS
+----------------------------------- */
+
+.pm-grid {
+    text-align: center;
+    
+    &__column {
+        background-color: #2F60FE;
+        color: #FFF;
+
+        &:not(:first-child) {
+            background-color: #555;
+        }
+    }
+}
+
+/* -----------------------------------
+	Media Queries
+--------------------------------------------------------------------------------------------- */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    .pm-grid {
+        
+        &__column {
+        
+            &--2-columns,
+            &--3-columns,
+            &--6-columns {
+                grid-column: span 6;
+            }
+        }
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .pm-grid {
+        
+        &__column {
+        
+            &--4-columns {
+                grid-column: span 4;
+            }
+        }
+    }
+}
+
+/* Large devices (desktops, 1025px and up) */
+@media (min-width: 1025px) {
+
+    .pm-grid {
+        
+        &__column {
+            @for $i from 1 through 12 {
+        
+                &--#{$i}-columns {
+                    grid-column: span #{$i};
+                }
+            }
+        }
+    }    
+}
+
+@media (min-width: 1200px) {
+
+    .pm-grid {
+
+        &--contained {
+    
+            .pm-grid__container {
+                max-width: 1040px;
+            }
+        }
+    
+        &--boxed {
+            max-width: 1040px;
+        }
+    }    
+}
+
+
+@media (min-width: 1440px) {
+
+    .pm-grid {
+
+        &--contained {
+    
+            .pm-grid__container {
+                max-width: $pm-grid-container-max-width;
+            }
+        }
+    
+        &--boxed {
+            max-width: $pm-grid-container-max-width;
+        }
+    }    
+}

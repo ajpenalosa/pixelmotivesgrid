@@ -1,4 +1,9 @@
-body {
-    background-color: #FFF;
-    color: #FFF;
-}
+// https://www.toptal.com/css/introduction-to-bem-methodology
+.block-name__element-name--modifier-name { /* Styles */ }
+
+html { box-sizing: border-box }
+*, *:before, *:after { margin: 0; padding: 0; box-sizing: inherit }
+
+@import './variables';
+@import './typography';
+@import './pm-grid';
